@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都盘古王公园-游玩攻略与景点介绍指南</title>
+    <meta name="description" content="花都盘古王公园是广州花都区以盘古文化为主题的生态公园，提供详细游玩攻略、景点介绍、登山路线、开放时间及交通指南，助您规划愉快旅程。">
+    <meta name="keywords" content="花都盘古王公园,盘古王公园攻略,花都旅游,盘古文化,广州公园,盘古王庙,狮岭镇景点">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f4f7f5;
+            color: #2d3e2f;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #2a5c3a 0%, #3a7a4f 100%);
+            padding: 16px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            font-size: 32px;
+        }
+        .logo-text {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .header-info {
+            color: #d9ead3;
+            font-size: 14px;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 14px;
+            border-radius: 30px;
+        }
+        /* Nav */
+        .main-nav {
+            background: #1e462a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .main-nav li a {
+            display: block;
+            color: #e8f0e4;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
+            font-size: 15px;
+            border-bottom: 3px solid transparent;
+        }
+        .main-nav li a:hover, .main-nav li a.active {
+            background: rgba(255,255,255,0.1);
+            color: #ffd54f;
+            border-bottom-color: #ffd54f;
+        }
+        /* Hero */
+        .hero {
+            background: linear-gradient(to bottom, #e8f3e9, #f4f7f5);
+            padding: 40px 0;
+            border-bottom: 1px solid #cfe0d1;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .hero-content h1 {
+            font-size: 40px;
+            color: #1b4d2a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .hero-content p {
+            font-size: 16px;
+            color: #3a5a40;
+            margin-bottom: 15px;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+        .badge {
+            background: #2a5c3a;
+            color: #fff;
+            padding: 4px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+        }
+        .badge-light {
+            background: #d9ead3;
+            color: #2a5c3a;
+        }
+        .hero-img-placeholder {
+            background: #c5dcc7;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #6a9e7a;
+        }
+        .hero-img-placeholder .big-icon {
+            font-size: 60px;
+        }
+        .hero-img-placeholder p {
+            color: #2a5c3a;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        /* Section */
+        .section {
+            padding: 45px 0;
+        }
+        .section-title {
+            font-size: 28px;
+            color: #1b4d2a;
+            margin-bottom: 8px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #4c8b5c;
+            border-radius: 2px;
+        }
+        .section-sub {
+            color: #5a7a5e;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid #4c8b5c;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            font-size: 19px;
+            color: #1b4d2a;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #4a5a4a;
+        }
+        .card .tag {
+            display: inline-block;
+            background: #e3f0e5;
+            color: #2a5c3a;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-top: 12px;
+        }
+        /* Info table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .info-table th, .info-table td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid #e5efe6;
+        }
+        .info-table th {
+            background: #2a5c3a;
+            color: #fff;
+            font-weight: 600;
+            width: 130px;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #4c8b5c;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            background: #fff;
+            padding: 18px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 22px;
+            width: 12px;
+            height: 12px;
+            background: #4c8b5c;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+        .timeline-item h4 {
+            color: #1b4d2a;
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+        .timeline-item p {
+            font-size: 14px;
+            color: #4a5a4a;
+        }
+        /* Two col */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .content-panel {
+            background: #fff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .content-panel h3 {
+            color: #1b4d2a;
+            margin-bottom: 14px;
+            font-size: 20px;
+            border-left: 4px solid #4c8b5c;
+            padding-left: 12px;
+        }
+        .content-panel ul {
+            padding-left: 20px;
+        }
+        .content-panel li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        /* FAQ */
+        .faq-list {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5efe6;
+            padding: 20px 24px;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h4 {
+            color: #1b4d2a;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .faq-item p {
+            font-size: 15px;
+            color: #4a5a4a;
+        }
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, #2a5c3a, #3a7a4f);
+            color: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-box h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        .cta-box p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        /* Footer */
+        .site-footer {
+            background: #1b2e1f;
+            color: #b8ccba;
+            padding: 30px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .site-footer a {
+            color: #d9ead3;
+            text-decoration: none;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .main-nav li a {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+            .hero-content h1 {
+                font-size: 30px;
+            }
+            .section {
+                padding: 30px 0;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <span class="logo-icon">🌳</span>
+                <span class="logo-text">花都盘古王公园</span>
+            </div>
+            <span class="header-info">盘古文化 · 自然生态 · 休闲胜地</span>
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#intro" class="active">公园概览</a></li>
+            <li><a href="#spots">主要景点</a></li>
+            <li><a href="#route">登山路线</a></li>
+            <li><a href="#info">游玩信息</a></li>
+            <li><a href="#tips">游览贴士</a></li>
+            <li><a href="#faq">常见问题</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="intro">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>花都盘古王公园</h1>
+                    <p>位于广州市花都区狮岭镇，是一座以盘古文化为主题，融合自然山景与人文历史的城市生态公园。这里不仅是当地居民休闲健身的好去处，也是了解中华创世神话、感受山水意趣的旅行目的地。</p>
+                    <div class="hero-badges">
+                        <span class="badge">🎫 免费开放</span>
+                        <span class="badge badge-light">🏞️ 山林步道</span>
+                        <span class="badge">🗿 盘古文化</span>
+                        <span class="badge badge-light">⏱️ 建议游玩2-3小时</span>
+                    </div>
+                </div>
+                <div class="hero-img-placeholder">
+                    <span class="big-icon">⛰️</span>
+                    <p>园区主峰 · 盘古神像</p>
+                    <p style="font-size:13px; color:#3a5a40;">（此处为园区主景示意图）</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 公园简介 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">盘古王公园简介</h2>
+                <p class="section-sub">一座承载着创世传说与自然风光的城市山林</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🏔️ 地理位置</h3>
+                        <p>坐落于花都区狮岭镇北部，距广州市中心约50公里，交通便利，有多条公交线路直达公园入口，适合自驾及公共交通出行。</p>
+                        <span class="tag">狮岭镇</span>
+                    </div>
+                    <div class="card">
+                        <h3>📜 文化渊源</h3>
+                        <p>公园因山巅供奉盘古神像而得名，当地流传着盘古开天辟地的神话传说，每年农历十月十六日前后会举办盘古民俗文化活动，颇具地方特色。</p>
+                        <span class="tag">民俗节庆</span>
+                    </div>
+                    <div class="card">
+                        <h3>🌿 生态环境</h3>
+                        <p>园区森林覆盖率高，种植有多种亚热带植物，空气清新，登山途中可观赏到不同层次的植被景观，是天然的森林氧吧。</p>
+                        <span class="tag">森林步道</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 主要景点 -->
+        <section class="section" id="spots" style="background:#eaf1ea;">
+            <div class="container">
+                <h2 class="section-title">园内主要景点</h2>
+                <p class="section-sub">从山脚到山顶，串联起人文与自然的风景线</p>
+                <div class="two-col">
+                    <div class="content-panel">
+                        <h3>🗿 盘古神像与庙宇</h3>
+                        <p>位于公园最高处，是园区的核心景观。神像庄严肃穆，俯瞰花都大地。旁有盘古庙，香火不绝，每年节庆时这里会举行祭祀仪式，吸引众多游客与信众前来祈福。</p>
+                        <ul style="margin-top:10px;">
+                            <li>盘古神像高约数米，气势雄伟</li>
+                            <li>庙宇建筑古朴，保留传统风格</li>
+                            <li>登顶可远眺花都城区全景</li>
+                        </ul>
+                    </div>
+                    <div class="content-panel">
+                        <h3>🌳 登山步道与观景台</h3>
+                        <p>公园修建了完善的登山步道，沿途设有多个观景平台和休息凉亭。步道两旁绿树成荫，春季有山花烂漫，秋季则可欣赏层林尽染的山色。</p>
+                        <ul style="margin-top:10px;">
+                            <li>主步道全程约1.5公里，坡度适中</li>
+                            <li>设有清晰的路标和导览牌</li>
+                            <li>观景台视野开阔，适合摄影</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px;">
+                    <div class="content-panel">
+                        <h3>💧 山泉与溪流</h3>
+                        <p>山间有清澈的山泉汇成小溪，水质清冽。部分区域设有亲水平台，夏日里不少游客在此戏水纳凉，感受清凉。</p>
+                    </div>
+                    <div class="content-panel">
+                        <h3>🏕️ 休闲广场</h3>
+                        <p>山脚建有开阔的休闲广场，配有健身器材、儿童游乐区，是周边居民晨练、散步、亲子活动的主要场所。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 登山路线推荐 -->
+        <section class="section" id="route">
+            <div class="container">
+                <h2 class="section-title">登山路线推荐</h2>
+                <p class="section-sub">根据体力和时间，选择适合你的登山方式</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>轻松休闲线（约40分钟）</h4>
+                        <p>从公园正门进入，沿缓坡步道直接前往盘古庙区域，适合带老人小孩的家庭游客，路面平缓，以参观文化景点为主。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>登山健身线（约1.5小时）</h4>
+                        <p>走完整的登山环线，途经多个观景台、休息亭，最后登顶盘古神像。此路线有一定爬升，能体验到登山的乐趣，同时欣赏不同高度的风景。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>深度探索线（约2.5小时）</h4>
+                        <p>除主环线外，再探索山后的林间小径和溪流区域，适合喜爱自然观察的游客。建议穿着运动鞋，携带充足饮水。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 游玩实用信息 -->
+        <section class="section" id="info" style="background:#eaf1ea;">
+            <div class="container">
+                <h2 class="section-title">游玩实用信息</h2>
+                <p class="section-sub">开放时间、交通、门票等实用信息一览</p>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <div>
+                        <table class="info-table">
+                            <tr><th>开放时间</th><td>每日 06:00 - 19:00<br>（节假日正常开放）</td></tr>
+                            <tr><th>门票价格</th><td>免费入园</td></tr>
+                            <tr><th>建议游玩</th><td>2 - 3 小时</td></tr>
+                            <tr><th>公园地址</th><td>广州市花都区狮岭镇盘古王路</td></tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="info-table">
+                            <tr><th>公交线路</th><td>花都区乘坐 63路、88路 至盘古王公园站</td></tr>
+                            <tr><th>自驾路线</th><td>导航“花都盘古王公园”，公园门口设有停车场</td></tr>
+                            <tr><th>周边景点</th><td>芙蓉嶂风景区、洪秀全故居、花都湖</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 游览小贴士 -->
+        <section class="section" id="tips">
+            <div class="container">
+                <h2 class="section-title">游览贴心提示</h2>
+                <p class="section-sub">让您的盘古王公园之行更舒适愉快</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>👟 穿着建议</h3>
+                        <p>登山路段建议穿舒适的运动鞋或徒步鞋，夏季注意防晒，可携带遮阳帽。</p>
+                    </div>
+                    <div class="card">
+                        <h3>💧 饮水补给</h3>
+                        <p>园区内自动售货机较少，建议自备饮用水。山脚有少量小卖部，但营业时间不固定。</p>
+                    </div>
+                    <div class="card">
+                        <h3>🐜 防蚊虫</h3>
+                        <p>山林区域蚊虫较多，尤其在夏季傍晚，建议携带防蚊液。</p>
+                    </div>
+                    <div class="card">
+                        <h3>📷 最佳拍摄点</h3>
+                        <p>半山腰的观景台是拍摄盘古神像与城市全景的绝佳位置，清晨光线最佳。</p>
+                    </div>
+                    <div class="card">
+                        <h3>♻️ 环保意识</h3>
+                        <p>请将垃圾带下山，保护自然生态环境。园区内有多处垃圾桶，请分类投放。</p>
+                    </div>
+                    <div class="card">
+                        <h3>🕐 避开人流</h3>
+                        <p>周末及节假日上午9:00-11:00为人流高峰，建议早到或下午前往，体验更佳。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ -->
+        <section class="section" id="faq" style="background:#eaf1ea;">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-sub">关于花都盘古王公园，游客最常问的问题</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>Q: 盘古王公园可以带宠物进入吗？</h4>
+                        <p>A: 原则上不建议携带宠物入园，尤其是登山区域。广场区域偶尔可见小型犬，但为了安全和其他游客体验，建议将宠物留在家中。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: 公园内有餐饮服务吗？</h4>
+                        <p>A: 公园内部没有正式餐厅，仅在正门附近有少量小摊贩和便利店。建议游客自带干粮或到狮岭镇上的餐馆用餐。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: 是否适合老人和小孩游览？</h4>
+                        <p>A: 适合。公园山脚区域设施完善，路面平缓，适合老人散步。登山步道部分路段较陡，体力较弱者可以选择只游览山脚文化区。小孩在广场和溪流区域会玩得很开心。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: 盘古王公园有停车场吗？收费吗？</h4>
+                        <p>A: 公园正门设有免费停车场，但车位有限，节假日常常爆满。建议尽早前往或选择公共交通。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q: 一年中什么时候去最好？</h4>
+                        <p>A: 春秋两季（3-5月、10-12月）气候舒适，景色最佳。夏季虽然炎热，但山林中较为凉爽，适合清晨和傍晚登山。农历十月十六的盘古文化节是特色体验时机。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-box">
+                    <h3>🌄 准备好探索盘古王公园了吗？</h3>
+                    <p>带上家人朋友，来一场说走就走的自然文化之旅吧！记得关注天气变化，合理安排出行时间。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <p>花都盘古王公园 · 游玩信息指南 | 本页面为信息展示页，实际开放信息请以园区公告为准</p>
+            <p style="margin-top:8px;">© 2024 花都盘古王公园攻略网 | <a href="#">网站地图</a> | <a href="#">免责声明</a></p>
+        </div>
+    </footer>
+</body>
+</html>
