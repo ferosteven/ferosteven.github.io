@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>紧搏王子游戏-热门动作冒险手游专题站 玩法攻略与下载指南</title>
+  <meta name="description" content="紧搏王子游戏专题站，提供最新版本下载、核心玩法解析、角色攻略、关卡技巧与玩家社区，帮助你快速上手这款动作冒险手游。" />
+  <meta name="keywords" content="紧搏王子游戏,紧搏王子,王子游戏,动作冒险手游,紧搏王子攻略,紧搏王子下载" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: #f5f2f0;
+      color: #2e2a28;
+      line-height: 1.6;
+    }
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* 页眉 / 导航 */
+    .site-header {
+      background: #1e1b1a;
+      color: #f0e7df;
+      padding: 18px 0;
+      border-bottom: 4px solid #c49b6a;
+    }
+    .header-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      background: #c49b6a;
+      border-radius: 20px 4px 20px 4px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #1e1b1a;
+      font-weight: 800;
+    }
+    .brand h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    }
+    .brand small {
+      display: block;
+      font-size: 0.8rem;
+      color: #c49b6a;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+    }
+    .main-nav a {
+      color: #d9ccc2;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    .main-nav a:hover {
+      color: #f5e7d9;
+      border-bottom-color: #c49b6a;
+    }
+    /* 首屏 hero */
+    .hero {
+      background: linear-gradient(145deg, #2f2a27 0%, #4b3f36 100%);
+      color: #f2e4d8;
+      padding: 50px 0;
+      border-radius: 0 0 60px 60px;
+      margin-bottom: 32px;
+    }
+    .hero-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+    .hero-copy {
+      flex: 1 1 300px;
+    }
+    .hero-copy h2 {
+      font-size: 2.6rem;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+    .hero-copy p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 28px;
+      color: #e8d5c4;
+    }
+    .hero-badge {
+      background: #c49b6a;
+      color: #1e1b1a;
+      padding: 10px 22px;
+      border-radius: 40px;
+      font-weight: 700;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+      border: 2px solid transparent;
+    }
+    .btn-gold {
+      background: #c49b6a;
+      color: #21201e;
+    }
+    .btn-gold:hover {
+      background: #dbb27d;
+    }
+    .btn-outline-light {
+      border-color: #d9c7b6;
+      color: #f2e4d8;
+    }
+    .btn-outline-light:hover {
+      background: rgba(255,255,240,0.1);
+    }
+    .hero-art {
+      flex: 1 1 260px;
+      background: rgba(255,255,240,0.06);
+      border-radius: 45px 10px 45px 10px;
+      padding: 32px 18px;
+      text-align: center;
+      border: 2px solid #c49b6a55;
+    }
+    .hero-art span {
+      font-size: 5rem;
+      display: block;
+      filter: drop-shadow(0 8px 12px #00000050);
+    }
+    .hero-art small {
+      font-size: 1rem;
+      background: #c49b6a;
+      color: #1e1b1a;
+      padding: 4px 12px;
+      border-radius: 30px;
+    }
+    /* 栏目通用 */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 28px;
+      padding-left: 16px;
+      border-left: 10px solid #c49b6a;
+      margin-top: 15px;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .game-card {
+      background: #ffffffd9;
+      backdrop-filter: blur(2px);
+      border-radius: 28px 8px 28px 8px;
+      padding: 18px 16px 22px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border: 1px solid #e2d6cb;
+      transition: 0.2s;
+    }
+    .game-card:hover {
+      transform: translateY(-6px);
+      border-color: #c49b6a;
+      box-shadow: 0 16px 30px rgba(0,0,0,0.1);
+    }
+    .card-icon {
+      background: #2e2a28;
+      border-radius: 20px;
+      color: #c49b6a;
+      font-size: 2.2rem;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .game-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+    .game-card p {
+      color: #5d534c;
+      font-size: 0.95rem;
+    }
+    .tag {
+      display: inline-block;
+      background: #efe4da;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      margin-top: 12px;
+      color: #4d3f35;
+      font-weight: 600;
+    }
+    .list-articles {
+      background: #fbf7f3;
+      border-radius: 40px;
+      padding: 30px;
+      margin: 40px 0;
+    }
+    .article-item {
+      display: flex;
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px dashed #c9b8aa;
+      align-items: baseline;
+    }
+    .article-item:last-child { border-bottom: none; }
+    .article-num {
+      font-weight: 800;
+      color: #c49b6a;
+      font-size: 1.4rem;
+      min-width: 45px;
+    }
+    .article-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+    .article-item p {
+      color: #5f554e;
+    }
+    /* 角色/攻略 */
+    .characters {
+      background: #eae0d6;
+      border-radius: 40px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    .char-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .char-card {
+      background: #fff;
+      padding: 18px 20px;
+      border-radius: 28px;
+      flex: 1 1 180px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .char-card .role {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #c49b6a;
+    }
+    /* FAQ */
+    .faq-box {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    details {
+      background: #f9f3ee;
+      padding: 18px 24px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    summary {
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #3f322c;
+    }
+    details p {
+      margin-top: 12px;
+      color: #4b4039;
+    }
+    /* 页脚 */
+    .site-footer {
+      background: #1e1b1a;
+      color: #b7a79b;
+      padding: 32px 0;
+      margin-top: 40px;
+      text-align: center;
+      border-top: 4px solid #c49b6a;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 20px;
+    }
+    .footer-links a {
+      color: #cbb7a8;
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: #e4d3c3; }
+    /* 响应式 */
+    @media (max-width: 720px) {
+      .header-grid { flex-direction: column; align-items: start; gap: 10px; }
+      .brand h1 { font-size: 1.6rem; }
+      .hero-copy h2 { font-size: 2rem; }
+      .hero-inner { flex-direction: column; }
+      .hero-art { width: 100%; }
+      .section-title { font-size: 1.5rem; }
+    }
+  </style>
+  <!-- 广告脚本（固定） -->
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper header-grid">
+      <div class="brand">
+        <div class="brand-icon">⚔️</div>
+        <div>
+          <h1>紧搏王子游戏</h1>
+          <small>官方专题 · 冒险集结地</small>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#gameplay">玩法</a></li>
+          <li><a href="#heroes">角色</a></li>
+          <li><a href="#guide">攻略</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#download">下载</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首屏 -->
+    <section class="hero">
+      <div class="wrapper hero-inner">
+        <div class="hero-copy">
+          <span class="hero-badge">🔥 新版本 · 紧搏王子</span>
+          <h2>掌控紧搏之力，<br>开启王子冒险新篇章</h2>
+          <p>紧搏王子是一款以“紧搏”为核心机制的原创动作冒险手游，你将扮演年轻的王子，在古老的遗迹与陷阱中穿梭，运用独特的紧搏连击与时间差操作，破解谜题、击败魔物。游戏强调精准操作与节奏感，同时融入轻度的Roguelite养成。</p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-gold">立即试玩</a>
+            <a href="#" class="btn btn-outline-light">查看攻略</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <span>🤴🏻⚡</span>
+          <small>紧搏王子 · 王冠觉醒</small>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <!-- 游戏特色卡片 -->
+      <section>
+        <h2 class="section-title">⚡ 核心玩法 · 紧搏机制</h2>
+        <div class="game-grid">
+          <div class="game-card">
+            <div class="card-icon">⏱️</div>
+            <h3>紧搏连击</h3>
+            <p>在敌人攻击瞬间进行“紧搏”格挡，触发时间减缓并获得额外连击点。节奏感是取胜关键。</p>
+            <span class="tag">战斗核心</span>
+          </div>
+          <div class="game-card">
+            <div class="card-icon">🏰</div>
+            <h3>王朝迷城</h3>
+            <p>探索超过20个手工设计的关卡，包含动态机关、隐藏密室与古代王族宝藏。</p>
+            <span class="tag">探索解谜</span>
+          </div>
+          <div class="game-card">
+            <div class="card-icon">👑</div>
+            <h3>王子成长</h3>
+            <p>通过紧搏历练解锁新技能，从剑术到王室魔法，打造你的专属战斗流派。</p>
+            <span class="tag">角色养成</span>
+          </div>
+          <div class="game-card">
+            <div class="card-icon">⚔️</div>
+            <h3>首领挑战</h3>
+            <p>每章末尾都有强大的“紧搏巨像”，需要完美利用紧搏反击才能击破。</p>
+            <span class="tag">高难挑战</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 最新文章 / 游戏资讯 -->
+      <section class="list-articles" id="guide">
+        <h2 class="section-title" style="border-left-color:#8f6b47;">📜 紧搏攻略 · 最新情报</h2>
+        <div class="article-item">
+          <div class="article-num">01</div>
+          <div>
+            <h3>紧搏王子新手向：三分钟掌握紧搏时机</h3>
+            <p>紧搏不是无脑闪避，而是观察敌人手臂发光瞬间按下格挡，成功可获得“紧搏充能”，充能满后释放王子技。</p>
+          </div>
+        </div>
+        <div class="article-item">
+          <div class="article-num">02</div>
+          <div>
+            <h3>隐藏关卡“禁忌回廊”开启条件</h3>
+            <p>在第四关取得三块“王室碎片”并献祭到王座，即可解锁隐藏区域，内有传说级紧搏护腕。</p>
+          </div>
+        </div>
+        <div class="article-item">
+          <div class="article-num">03</div>
+          <div>
+            <h3>版本1.2更新：新增“紧搏试炼场”</h3>
+            <p>玩家可以无限挑战随机怪物波次，冲击排行榜，奖励专属王子皮肤。</p>
+          </div>
+        </div>
+        <div class="article-item">
+          <div class="article-num">04</div>
+          <div>
+            <h3>角色强度讨论：紧搏王女·赛琳</h3>
+            <p>最新参战角色，拥有双段紧搏，适合喜欢高风险高回报的玩家。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 热门角色 -->
+      <section class="characters" id="heroes">
+        <h2 class="section-title">🤺 热门角色 · 紧搏者</h2>
+        <div class="char-grid">
+          <div class="char-card">
+            <div class="role">王子</div>
+            <h3>亚瑟·紧搏</h3>
+            <p>均衡型，紧搏后强化普攻，适合新手</p>
+          </div>
+          <div class="char-card">
+            <div class="role">赛琳</div>
+            <h3>紧搏王女</h3>
+            <p>双段紧搏，高机动，爆发力强</p>
+          </div>
+          <div class="char-card">
+            <div class="role">铁卫</div>
+            <h3>格雷将军</h3>
+            <p>防御反击，紧搏盾反，硬核坦克</p>
+          </div>
+          <div class="char-card">
+            <div class="role">咒术</div>
+            <h3>梅林导师</h3>
+            <p>远程紧搏法阵，控场与辅助</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 下载与平台 -->
+      <section id="download" style="background:#e3d5c8; border-radius: 40px; padding: 30px; margin: 40px 0;">
+        <h2 class="section-title">📲 紧搏王子游戏 · 下载与平台</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+          <div style="flex:1;">
+            <p style="font-size:1.2rem; margin-bottom: 14px;">紧搏王子现已登陆iOS与Android平台，同时提供PC模拟器版本。搜索“紧搏王子”即可下载官方包。</p>
+            <p>官方建议配置：Android 8.0以上 / iOS 12以上；游戏包体约800MB，含高清材质包。</p>
+          </div>
+          <div style="background:#fff; padding: 20px 28px; border-radius: 30px; text-align:center;">
+            <span style="font-size:2.8rem;">⬇️</span>
+            <h3 style="font-size:1.6rem; margin-top:10px;">v1.2.3</h3>
+            <span class="tag">最新版</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ部分 -->
+      <section class="faq-box" id="faq">
+        <h2 class="section-title">❓ 常见问题 · 紧搏王子</h2>
+        <details open>
+          <summary>紧搏王子游戏是免费游戏吗？</summary>
+          <p>游戏采用免费下载+内购解锁皮肤与道具的模式。核心剧情和全部关卡都可免费体验，不付费也能通关。</p>
+        </details>
+        <details>
+          <summary>紧搏操作具体怎么按？</summary>
+          <p>在敌人攻击命中前0.3秒内点击“格挡”键，即可触发紧搏。成功时会出现金色闪光，消耗部分体力并重置普攻。</p>
+        </details>
+        <details>
+          <summary>游戏有PC版本吗？</summary>
+          <p>官方推荐使用安卓模拟器体验，同时Steam页面已在筹备中，敬请期待。</p>
+        </details>
+        <details>
+          <summary>如何获得隐藏角色“梅林导师”？</summary>
+          <p>完成所有主线章节且紧搏评价达到S级，即可在“王室图书馆”招募。</p>
+        </details>
+      </section>
+
+      <!-- 游戏背景故事简述 -->
+      <section style="margin: 30px 0 20px;">
+        <h2 class="section-title">📖 故事背景 · 紧搏纪元</h2>
+        <div style="background:#f8f0e9; border-radius: 30px; padding: 28px;">
+          <p>在遥远的紧搏王国，古老的诅咒使时间变得混乱。年轻的王子亚瑟在加冕夜遭遇政变，他必须借助“紧搏之力”——一种通过精确格挡来逆转时间洪流的力量，重聚盟友，夺回王冠。一路上，紧搏不仅是对抗敌人的技巧，更是解开王国谜题的钥匙。游戏用细腻的像素与3D混合画风，营造出史诗而神秘的冒险氛围。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-links">
+        <a href="#">紧搏王子官网</a>
+        <a href="#">玩家社区</a>
+        <a href="#">隐私政策</a>
+        <a href="#">客服支持</a>
+      </div>
+      <p>© 紧搏王子游戏专题站 · 本页面为玩家交流站点，非官方渠道，内容仅供参考</p>
+    </div>
+  </footer>
+</body>
+</html>
